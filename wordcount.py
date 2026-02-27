@@ -8,7 +8,7 @@ def count_text(text: str) -> tuple[int, int, int]:
     chars = list(text)
     return (len(lines), len(words), len(chars))
 
-def main() -> int:
+def main() -> None:
     parser = argparse.ArgumentParser(
         description="Count lines, words, and characters in a text file."
     )
@@ -23,10 +23,10 @@ def main() -> int:
     path = Path(args.path)
     if not path.exists():
         print(f"Error: file not found: {path}")
-        return 1
+        raise SystemExit(1)
     if path.is_dir():
         print(f"Error: path is a directory: {path}")
-        return 1
+        raise SystemExit(1)
 
     text = path.read_text(encoding="utf-8", errors="replace")
     lines, words, chars = count_text(text)
@@ -37,7 +37,7 @@ def main() -> int:
     print(f"Words  : {words}")
     print(f"Chars  : {chars}")
     print("=" * 30)
-    return 0
+    raise SystemExit(0)
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    main()
