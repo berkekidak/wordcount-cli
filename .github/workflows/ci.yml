@@ -16,7 +16,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Run basic check
+      - name: Install dependencies
         run: |
-          python wordcount.py --version
-          python wordcount.py README.md
+          python -m pip install -U pip
+          python -m pip install -e .
+          python -m pip install pytest
+
+      - name: Run tests
+        run: |
+          pytest -m tests
