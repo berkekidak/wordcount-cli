@@ -13,3 +13,6 @@ dependencies = []
 
 [project.scripts]
 wordcount = "wordcount:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
