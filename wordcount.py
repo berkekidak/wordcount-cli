@@ -1,6 +1,8 @@
 import argparse
 from pathlib import Path
+
 __version__ = "0.1.0"
+
 
 def count_text(text: str) -> tuple[int, int, int]:
     lines = text.splitlines()
@@ -8,15 +10,12 @@ def count_text(text: str) -> tuple[int, int, int]:
     chars = list(text)
     return (len(lines), len(words), len(chars))
 
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Count lines, words, and characters in a text file."
     )
-    parser.add_argument(
-        "--version",
-        action="version",
-        version=f"%(prog)s {__version__}"
-    )
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
     parser.add_argument("path", help="Path to a text file")
     args = parser.parse_args()
 
@@ -38,6 +37,7 @@ def main() -> None:
     print(f"Chars  : {chars}")
     print("=" * 30)
     raise SystemExit(0)
+
 
 if __name__ == "__main__":
     main()
