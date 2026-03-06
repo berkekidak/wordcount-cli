@@ -1,7 +1,6 @@
 # Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
 *.egg-info/
 .pytest_cache/
 
@@ -11,4 +10,6 @@ venv/
 
 # macOS
 .DS_Store
+
+# Local test files
 test.txt
