@@ -1,7 +1,17 @@
-# wordcount-cli
+# berke-wordcount-cli
 
-Tiny Python CLI that prints line, word, and character counts for a text file.
+A tiny Python CLI tool that prints line, word, and character counts for a text file.
 
-## Usage
+## Features
 
-python wordcount.py path/to/file.txt
+- Count lines
+- Count words
+- Count characters
+- Simple command-line usage
+
+## Installation
+
+### From TestPyPI
+
+```bash
+python3 -m pip install --index-url https://test.pypi.org/simple/ --no-deps berke-wordcount-cli
