@@ -1,4 +1,3 @@
-```md
 # berke-wordcount-cli
 
 A tiny Python CLI tool that prints line, word, and character counts for a text file.

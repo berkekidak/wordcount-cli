@@ -12,4 +12,5 @@ venv/
 .DS_Store
 
 # Local test files
-test.txtdist/
+test.txt
+dist/
